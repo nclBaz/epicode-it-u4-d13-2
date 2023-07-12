@@ -1,10 +1,8 @@
 package u4d13.entities;
 
-import java.util.UUID;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -18,12 +16,16 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+@IdClass(CompositeStudentKey.class)
 // @AllArgsConstructor
 public class Student {
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
+//	@SequenceGenerator(name = "seq", sequenceName = "my_sequence", allocationSize = 50)
+//	private long id;
 	@Id
-	@GeneratedValue
-	private UUID id;
 	private String firstName;
+	@Id
 	private String lastName;
 
 	public Student(String firstName, String lastName) {
