@@ -13,5 +13,4 @@ public class CompositeStudentKey implements Serializable {
 	protected String firstName;
 	protected String lastName;
 
-
 }
