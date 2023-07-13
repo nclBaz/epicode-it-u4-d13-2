@@ -33,8 +33,9 @@ public class Document {
 	// nella classe User
 	private User user;
 
+	// SELECT * FROM users WHERE document=documents.id
+
 	public Document(String code, LocalDate issueDate, String country) {
-		super();
 		this.code = code;
 		this.issueDate = issueDate;
 		this.country = country;
